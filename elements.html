@@ -46,141 +46,42 @@
 									ROV</h1>
 									<p>Remotely Operated Underwater Vehicle - Senior Design Project</p>
 								</header>
-								<div class="image main"><img src="images/FullCad.JPG" alt="" /></div>
+								<div class="image main"><img src="images/Finished_ROV_Front.JPG" alt="" /></div>
 								<h2>Background</h2>
 									<p>This project originated from the need for an affordable and adaptable underwater remotely operated vehicle suitable for academic research and experimentation. Commercial ROV systems are often cost prohibitive and limit customization, making them impractical for repeated use by student teams. The intent was to develop a proof of concept platform using off the shelf components and readily manufacturable parts that could serve as a reusable baseline for future cohorts. Emphasis was placed on modularity, reliability, and ease of modification so that subsequent teams could expand functionality without redesigning the core system.</p>
 								<h2>Goal</h2>
 									<p>The goal of this project was to design and build a versatile underwater ROV capable of stable maneuvering, near surface operation, and future subsystem expansion. The platform was intended to support applications such as underwater observation, autonomous pin point manuverability, and environmental interaction using mechanical arms.</p>
 								<div class="image main"><img src="images/ExplodedCad.JPG" alt="" /></div>
-								<h2>Specifications</h2>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Part</th>
-													<th>Description</th>
-													<th>Material</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Top air intake plate</td>
-													<td>Structural housing that directs incoming airflow toward the impeller</td>
-													<td>6061 Aluminum</td>
-												</tr>
-												<tr>
-													<td>Bottom cold plate module</td>
-													<td>Liquid cooled heat transfer plate with internal channels designed to absorb heat from the airflow</td>
-													<td>6061 Aluminum</td>
-												</tr>
-												<tr>
-													<td>Air filter</td>
-													<td>Perforated protective screen to prevent debris from entering system</td>
-													<td>Polyethylene Terephthalate Glycol</td>
-												</tr>
-												<tr>
-													<td>Impeller</td>
-													<td>Rotating fan component that drives forced airflow through the system</td>
-													<td>Polyethylene Terephthalate Glycol</td>
-												</tr>
-												<tr>
-													<td>Impeller Pin</td>
-													<td>Central support shaft that secures the impeller</td>
-													<td>304 stainless steel</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								<h2>Boundary Conditions</h2>
-								<div class="image main"><img src="images/BoundaryCondition.JPG" alt="" /></div>
-								<p>Enclosed system - Lids on all orifice</p>
-									<div class="table-wrapper">
-										<table class="boundary-table">
-											<thead>
-												<tr>
-													<th>Boundary Conditions</th>
-													<th>Value</th>
-													<th>Units</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Water Inlet Volume Flow</td>
-													<td>1.017</td>
-													<td class="units">
-														<span>in<sup>3</sup></span>
-														<span>/</span>
-														<span>s</span>
-													</td>
-												</tr>
-												<tr>
-													<td>Water Inlet Flow Temperature</td>
-													<td>68</td>
-													<td>°F</td>
-												</tr>
-												<tr>
-													<td>Water Outlet Static Pressure</td>
-													<td>14.7</td>
-													<td>psi</td>
-												</tr>
-												<tr>
-													<td>Air Inlet Environmental Pressure</td>
-													<td>14.7</td>
-													<td>psi</td>
-												</tr>
-												<tr>
-													<td>Air Inlet Environmental Temperature</td>
-													<td>140</td>
-													<td>°F</td>
-												</tr>
-												<tr>
-													<td>Air Outlet Volume Flow</td>
-													<td>432</td>
-													<td class="units">
-														<span>in<sup>3</sup></span>
-														<span>/</span>
-														<span>s</span>
-													</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									<h3>Assumptions</h3>
-											<ul>
-												<li>Steady State</li>
-												<li>Idealized impeller boundary</li>
-												<li>Constant material properties</li>
-												<li>No radiation</li>
-											</ul>
-								<h2>Fluid Subdomain</h2>
-									<div class="image main"><img src="images/FluidSubdomain.JPG" alt="" /></div>
-								<h2>Simulation Results</h2>
-									<h3>Air Inlet to Impeller Heat Map</h3>
-										<div class="image main"><img src="images/AirI_Inlet_To_Impeller_Heat_Map.JPG" alt="" /></div>
-											<ul>
-												<li>We can see that inlet air temperature (set to 140 °F) is cooled by liquid cold plate.</li>
-												<li>Cold spots at impeller are due to the idealized outlet volume flow boundary condition, which artificially accelerates fluid and reduces local static temperature due to energy redistribution in the solver.</li>
-												<li>Does not consider rotating forces of the impeller.</li>
-												<li>Does not consider the heat output of a small motor driving the impeller.</li>
-											</ul>									
-									<h3>Air Inlet and Outlet Heat Maps</h3>
-										<h4>Air Inlet Temp (just after filter)</h4>
-										<div class="image main"><img src="images/Air_Inlet_Temp_after_filter.JPG" alt="" /></div>
-										<h4>Air Outlet Temp (just before impeller)</h4>
-										<div class="image main"><img src="images/Air_Inlet_Temp_before_impeller.JPG" alt="" /></div>
-											<ul>
-												<li>Heat maps show a more accurate representation of air temperature without the noise of the impeller cold spots affecting plots.</li>
-											</ul>
-									<h3>Liquid Cold Plate Fluid Heat Map</h3>
-										<div class="image main"><img src="images/Liquid_Cold_Plate_Fluid_Heat_Map.JPG" alt="" /></div>
-											<ul>
-												<li>Inlet water temperature (set to 68 °F) absorbs heat from air to an outlet temperature of around 70 °F.</li>
-											</ul>
+								<h2>System Overview</h2>
+									<p>text</p>
+									<div class="image main"><img src="images/ExplodedCad.JPG" alt="" /></div>
+								<h2>Mechanical Design</h2>
+									<p>text</p>
+									<div class="image main"><img src="images/ExplodedCad.JPG" alt="" /></div>
+								<h2>Electrical System Design</h2>
+									<p>text</p>
+									<div class="image main"><img src="images/ExplodedCad.JPG" alt="" /></div>
+								<h2>Control System and Software</h2>
+									<p>text</p>
+									<div class="image main"><img src="images/ExplodedCad.JPG" alt="" /></div>
+								<h2>Simulation</h2>
+									<p>text</p>
+									<div class="image main"><img src="images/ExplodedCad.JPG" alt="" /></div>
+								<h2>Manufacturing and Assembly</h2>
+									<p>text</p>
+									<div class="image main"><img src="images/ExplodedCad.JPG" alt="" /></div>
+								<h2>Testing and Results</h2>
+									<p>text</p>
+									<div class="image main"><img src="images/ExplodedCad.JPG" alt="" /></div>
+								<h2>Design Challenges and Lessons Learned</h2>
+									<p>text</p>
+									<div class="image main"><img src="images/ExplodedCad.JPG" alt="" /></div>
+								<h2>Future Ideas</h2>
+									<p>text</p>
+									<div class="image main"><img src="images/ExplodedCad.JPG" alt="" /></div>
 								<h2>Conclusion</h2>
-									<p>The simulation demonstrates that an air to liquid assisted cooling module is capable of reducing inlet air temperature by approximately 10 °F from its initial air inlet temperature (140 °F) under the modeled operating conditions. The liquid cold plate module introduces 68 °F water into the system, extracting heat from the incoming hot air before it is directed upward by the impeller. Overall, the results indicate that the concept is thermally viable and capable of delivering measurable air temperature reduction upstream of the GPU intake. Future work would include incorporating rotating impeller physics, motor heat generation, and transient operating conditions to further refine predicted performance.</p>
-
-
-								
+									<p>text</p>
+									<div class="image main"><img src="images/ExplodedCad.JPG" alt="" /></div>
 							</section>
 					</div>
 
@@ -222,5 +123,6 @@
 	</body>
 
 </html>
+
 
 
