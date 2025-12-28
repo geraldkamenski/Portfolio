@@ -93,6 +93,7 @@
 									</div>
 								<h2>Boundary Conditions</h2>
 								<div class="image main"><img src="images/BoundaryCondition.JPG" alt="" /></div>
+								<p>Enclosed system - Lids on all orfice</p>
 									<div class="table-wrapper">
 										<table class="boundary-table">
 											<thead>
@@ -144,14 +145,34 @@
 											</tbody>
 										</table>
 									</div>
-								<p>Enclosed system - Lids on all orfice</p>
 								<h2>Fluid Subdomain</h2>
 									<div class="image main"><img src="images/FluidSubdomain.JPG" alt="" /></div>
+										<h3>Assumptions</h3>
 											<ul>
 												<li>Steady State</li>
 												<li>Idealized impeller boundary</li>
 												<li>Constant material properties</li>
 												<li>No radiation</li>
+											</ul>
+								<h2>Simulation Results</h2>
+									<h3>Air Inlet to Impeller Heat Map</h3>
+										<div class="image main"><img src="images/AirI_Inlet_To_Impeller_Heat_Map.JPG" alt="" /></div>
+											<ul>
+												<li>We can see that inlet air temperature (set to 140 °F) is cooled by liquid cold plate.</li>
+												<li>Cold spots at impeller are due to the idealized outlet volume flow boundary condition, which artificially accelerates fluid and reduces local static temperature due to energy redistribution in the solver.</li>
+												<li>Does not consider rotating forces of the impeller.</li>
+												<li>Does not consider the heat output of a small motor driving the impeller.</li>
+											</ul>									
+									<h3>Air Inlet Temp (just after filter) & Air Outlet Temp (just before impeller)</h3>
+										<div class="image main"><img src="images/Air_Inlet_Temp_after_filter.JPG" alt="" /></div>
+										<div class="image main"><img src="images/Air_Inlet_Temp_before_impeller.JPG" alt="" /></div>
+											<ul>
+												<li>Heat maps show a more accurate representation of air temperature without the noise of the impeller cold spots affecting plots.</li>
+											</ul>
+									<h3>Liquid Cold Plate Fluid Heat Map</h3>
+										<div class="image main"><img src="images/Liquid_Cold_Plate_Fluid_Heat_Map.JPG" alt="" /></div>
+											<ul>
+												<li>Inlet water temperature (set to 68 °F) absorbs heat from air to an outlet temperature of around 70 °F.</li>
 											</ul>
 								
 
@@ -200,6 +221,7 @@
 	</body>
 
 </html>
+
 
 
 
