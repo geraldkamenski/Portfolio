@@ -53,40 +53,51 @@
 									<p>The goal of this project was to design and build a versatile underwater ROV capable of stable maneuvering, near surface operation, and future subsystem expansion. The platform was intended to support applications such as underwater observation, autonomous pin point manuverability, and environmental interaction using mechanical arms.</p>
 								<div class="image main"><img src="images/###" alt="" /></div>
 								<h2>System Overview</h2>
-									<p>text</p>
-									<div class="image main"><img src="images/Finished_ROV_TOP.jpg" alt="" /></div>
 									<div class="image main"><img src="images/Shelved.jpg" alt="" /></div>
+									<p>The project focused on the design and fabrication of a small scale, tethered remotely operated underwater vehicle intended as a modular and reusable platform for future academic and research applications. The ROV consists of a lightweight PVC structural frame, a sealed central pressure housing for electronics, and a four thruster propulsion system for maneuverability. Control and communication are handled through a tethered interface, allowing real time operation and monitoring from the surface. The system was designed with scalability in mind, enabling future teams to expand functionality without redesigning the core vehicle architecture</p>
+									<div class="image main"><img src="images/Finished_ROV_TOP.jpg" alt="" /></div>
 								<h2>Mechanical Design</h2>
-									<p>text</p>
+									<p>The mechanical structure of the ROV was designed to balance strength, simplicity, and manufacturability. A PVC frame was selected to provide a lightweight yet rigid structure capable of maintaining geometry during underwater operation. The modular frame allows easy access for maintenance and reconfiguration. A central cylindrical housing, constructed using an acrylic tube and sealed end caps, was integrated into the frame to protect internal electronics from water ingress.</p>
 									<div class="image main"><img src="images/Exploded1.JPG" alt="" /></div>
 									<div class="image main"><img src="images/Exploded2.JPG" alt="" /></div>
+									<p>An exploded CAD model was developed to verify component fitment, mounting interfaces, and serviceability prior to fabrication. Material choices and component placement were driven by center of gravity and center of buoyancy considerations to ensure stable operation underwater. The mechanical layout was validated through assembly and static testing before full system integration.</p>
 								<h2>Electrical System Design</h2>
-									<p>text</p>
+									<p>The electrical system was designed to provide reliable power distribution and modular control of the propulsion system. The ROV utilizes a dual battery configuration operating in parallel at 14.8 V to ensure stable voltage delivery and sufficient runtime. Power is distributed to electronic speed controllers which independently drive each thruster, allowing precise directional control.</p>
 									<div class="image main"><img src="images/Wiring_Diagram.JPG" alt="" /></div>
+									<p>All wiring connections were documented, labeled, and routed using waterproof connector plugs to improve serviceability and reduce the risk of failure during testing. A complete wiring diagram was created to guide assembly and support troubleshooting during integration and future modifications.</p>
 								<h2>Control System and Software</h2>
-									<p>text</p>
+									<p>Vehicle control is handled using a Pixhawk 6C flight controller running ArduSub firmware. This architecture enables full control of the ROV through a computer based graphical user interface utilizing a virtual joystick. The control system allows independent thruster control, real time feedback, and flexible configuration of control parameters.</p>
 									<div class="image main"><img src="images/flight_UI.JPG" alt="" /></div>
+									<p>The use of ArduSub provides a well supported open source platform that supports both manual operation and future upgrades toward autonomous functionality. The selected control system simplifies integration of additional sensors and actuators as the platform evolves</p>
 								<h2>Simulation</h2>
-									<p>text</p>
-									<div class="image main"><img src="images/Sim_BC1.JPG" alt="" /></div>
-									<div class="image main"><img src="images/Sim_BC2.JPG" alt="" /></div>
-									<div class="image main"><img src="images/Simulation.JPG" alt="" /></div>
-									<div class="image main"><img src="images/SimulationResults.JPG" alt="" /></div>
+									
+									<p>Prior to fabrication and deployment, structural simulations were conducted to evaluate the pressure resistance of the central housing. A CAD model was developed in SolidWorks and subjected to pressure loading representative of underwater conditions. Results showed near zero maximum Von Mises stress and minimal inward displacement, indicating that the housing would safely withstand submersion depths up to 10 meters.</p>
+									<h3>Boundary Conditions</h3>
+										<div class="image main"><img src="images/Sim_BC1.JPG" alt="" /></div>
+										<div class="image main"><img src="images/Sim_BC2.JPG" alt="" /></div>
+										<div class="image main"><img src="images/Simulation.JPG" alt="" /></div>
+										<div class="image main"><img src="images/SimulationResults.JPG" alt="" /></div>
+										<p>These simulations validated the mechanical design and informed confidence in the waterproofing approach prior to in water testing. Simulation results were used to confirm that the structural integrity of the system would not be a limiting factor during operation.</p>
+									
 								<h2>Manufacturing and Assembly</h2>
-									<p>text</p>
+									<p>Manufacturing of the ROV involved a combination of 3D printing, machining, and manual assembly. Structural components were printed using PLA filament at 30 percent infill to balance strength and weight. All printed parts were sealed with epoxy to improve water resistance.<br>
+									Waterproofing of the central housing was achieved through the use of rubber gaskets, O rings, epoxy sealed wire penetrations, and PVC cement. Assembly was performed in stages, beginning with mechanical integration followed by electrical installation after leak testing was completed</p>
 									<div class="image main"><img src="images/Electronics_And_Me.jpg" alt="" /></div>
+									<p>There was also significant effort was devoted to the assembly and validation of the electrical subsystems. All external interfaces were routed through IP rated waterproof connector plugs, which were assembled and sealed to protect internal electronics from water ingress. Internal components, including electronic speed controllers, power distribution hardware, and signal wiring, were installed with attention to strain relief, labeling, and serviceability. Electrical validation was performed incrementally by testing one thruster subsystem at a time, beginning with a single thruster and progressing to multi thruster configurations prior to full integration with the ROV frame. This staged testing approach allowed isolation and correction of wiring or configuration issues early in the process, reducing risk during full system integration and in water testing.</p>
 								<h2>Testing and Results</h2>
-									<p>text</p>
+									<p>Testing began with a full system static propulsion test conducted prior to mounting electronics to the frame. This test verified correct wiring, ESC responsiveness, power delivery, and control input behavior. All thrusters responded correctly to commands, and no electrical, communication, or calibration issues were observed.</p>
 									<div class="image main"><img src="images/Outside_Electronics.jpg" alt="" /></div>
+									<p>Following successful static testing, the housing was submerged without electronics to validate waterproofing. After passing leak tests, electronics were installed and integrated into the system. The ROV demonstrated stable operation and reliable control during testing, confirming the effectiveness of the mechanical, electrical, and control system design.</p>
 									<div class="image main"><img src="images/Underwater_Testing.jpg" alt="" /></div>
 								<h2>Design Challenges and Lessons Learned</h2>
-									<p>text</p>
+									<p>Key challenges included ensuring reliable waterproofing, maintaining balance between center of gravity and center of buoyancy, and organizing wiring to support future maintenance. Incremental testing and documentation proved critical in identifying potential failure points before full system integration. Conducting subsystem level tests prior to full assembly significantly reduced risk and simplified troubleshooting.</p>
 									<div class="image main"><img src="images/###" alt="" /></div>
 								<h2>Future Ideas</h2>
-									<p>text</p>
+									<p>The ROV platform was intentionally designed to support future expansion. Potential upgrades include autonomous navigation capabilities, integration of mechanical manipulators, and additional sensors such as cameras, GPS, and environmental monitoring instruments. The modular design enables future teams to adapt the system for specialized research applications without redesigning the core vehicle.</p>
 									<div class="image main"><img src="images/###" alt="" /></div>
 								<h2>Conclusion</h2>
-									<p>text</p>
+									<p>This project successfully demonstrated the design and implementation of a fully functional, modular underwater remotely operated vehicle capable of reliable in water operation without leakage or structural failure. The mechanical, electrical, and control systems performed as intended, with stable propulsion, dependable waterproofing, and seamless software transfer and configuration across the control architecture. Incremental subsystem testing and careful integration were key factors in achieving consistent performance and minimizing risk during full system deployment.<br>
+									Equally important to the technical outcome was the collaborative effort behind the project. The successful completion of the ROV was made possible through strong teamwork, cross subsystem support, and sustained problem solving during extended laboratory sessions. The experience highlighted the importance of communication, shared ownership, and adaptability in complex engineering projects, reinforcing both the technical and professional skills required for real world system development.</p>
 									<div class="image main"><img src="images/Team_Project.jpg" alt="" /></div>
 							</section>
 					</div>
@@ -129,6 +140,7 @@
 	</body>
 
 </html>
+
 
 
 
