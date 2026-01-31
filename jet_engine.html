@@ -64,29 +64,43 @@
 									All components are mounted to a custom testbed that maintains alignment, reduces measurement interference, and improves operational safety. The testbed structurally supports the engine, fuel system, and instrumentation while providing physical separation between hot components and fuel storage.</p>
 									<div class="image main"><img src="images/#" alt="" /></div>
 								<h2>Mechanical Design</h2>
-									<p>(insert mechanical design here)</p>
+									<p>The mechanical design of the jet engine is based on a compact multi stage turbojet architecture with a single rotating shaft. Air enters the engine through a large finned primary compressor stage designed to maximize mass flow into the system.<br /><br />
+									Downstream of the primary compressor, a spacer transitions the flow outward toward two secondary compressor stages with smaller fins positioned near the outer radius. This configuration drives the airflow outward in a conical pattern, increasing compression before entering the combustion chamber.<br /><br />
+									The rotating assembly is supported by a 2.5 millimeter diameter shaft held concentrically by two precision bearings. One bearing is located immediately downstream of the compressor stages, while the second is positioned just upstream of the turbine stator to maintain alignment across the full rotating length.<br /><br />
+									A single stator located near the turbine exit straightens the flow before expansion. Combustion of a propane air mixture is initiated using a high voltage spark system, after which the turbine extracts energy from the exhaust flow to sustain compressor rotation.</p>
 									<div class="image main"><img src="images/#" alt="" /></div>
-									<div class="image main"><img src="images/#" alt="" /></div>
-									<p>An exploded CAD model was developed to verify component fitment, mounting interfaces, and serviceability prior to fabrication. Material choices and component placement were driven by center of gravity and center of buoyancy considerations to ensure stable operation underwater. The mechanical layout was validated through assembly and static testing before full system integration.</p>
 								<h2>Fuel System Design</h2>
-									<p>(insert mechanical design here)</p>
+									<p>The fuel system was designed to deliver a controlled and repeatable flow of gaseous fuel into the combustion chamber. Propane was selected over butane primarily due to its higher vapor pressure at ambient temperatures, which allows for more stable fuel delivery without excessive cooling of the tank.<br /><br />
+									Fuel is routed using 1.6 millimeter outer diameter copper capillary tubing commonly used in refrigeration systems. This tubing allows for precise routing in tight spaces while maintaining adequate flow control. The routing follows a diamond shaped layout, which provides flexibility for thermal expansion and reduces stress concentrations in the tubing.<br /><br />
+									An adapter is used to connect the propane tank to a standard regulator valve, allowing manual adjustment of fuel flow during operation. This setup provides a simple but effective means of controlling combustion intensity without introducing unnecessary system complexity.</p>
 									<div class="image main"><img src="images/#" alt="" /></div>
 								<h2>Electrical System Design</h2>
-									<p>(insert electrical design here)</p>
+									<p>The electrical system supports three primary functions: ignition, startup, and instrumentation. A high voltage transformer is used to generate a spark inside the combustion chamber during startup. A starter motor is mechanically coupled to the compressor to bring the turbine up to ignition speed before combustion becomes self-sustaining.</p>
 									<div class="image main"><img src="images/Turbine_Electronics.jpg" alt="" /></div>
-									<p>(insert electrical design here)</p>
+									<p>Both the transformer and starter motor are powered by an external power supply to ensure consistent voltage and current delivery. Instrumentation is powered and controlled separately through a laptop and microcontroller.<br /><br />
+									Two load cells are used for data collection. One load cell measures thrust produced by the engine, while the second measures changes in the mass of the propane tank over time. This dual load cell setup enables direct calculation of mass flow rate and TSFC without relying on indirect estimates.</p>
 									<div class="image main"><img src="images/All_Electronics_Diagram.JPG" alt="" /></div>
 								<h2>Testbed System Design</h2>
-									<p>(insert mechanical design here)</p>
+									<p>The testbed was designed to minimize external influences on measurements while maintaining operator safety. Linear rails are used to reduce friction in the thrust measurement direction, allowing the thrust load cell to experience force primarily along its intended axis.<br /><br />
+									The propane tank is placed toward the front of the testbed, away from the turbine and exhaust. This positioning keeps the tank in a cooler region and reduces exposure to radiant and convective heating from the engine.<br /><br />
+									Long spacers are used between load cell attachment points to ensure proper force transmission and to prevent bending moments or unintended side loads. An acrylic screen is included as a safety precaution, providing a physical barrier between the operator and the rotating machinery without obstructing visibility.</p>
 									<div class="image main"><img src="images/#" alt="" /></div>
 								<h2>Control System and Software</h2>
-									<p>(insert Control System and Software here)</p>
+									<p>Engine operation is controlled through a combination of manual hardware inputs and software driven data acquisition. Ignition and starter motor operation are initiated using physical switches, while fuel flow is adjusted manually through a regulator valve to allow fine control during startup and steady state operation.<br /><br />
+									An Arduino Mega 2560 is used as the primary data acquisition device, interfacing with two load cells to measure thrust and fuel mass in real time. The Arduino is integrated with a Python based data processing and visualization script, allowing live monitoring of engine performance during operation.<br /><br />
+									The Python interface displays real time plots of thrust, fuel mass flow rate, and thrust specific fuel consumption (TSFC). User input within the software allows the operator to define specific start and end times for data recording during a run. In addition to logging the full dataset for the entire engine operation, the system automatically extracts and saves focused datasets and plots corresponding to the selected time intervals.<br /><br />
+									For each run, the software generates time stamped plots, structured data tables, and calculated TSFC values. Logged data includes time, thrust, fuel mass flow rate, propane tank mass, and calculated TSFC. A validation routine is also implemented to flag data points that deviate beyond expected bounds, helping identify sensor noise, transient startup behavior, or measurement anomalies.<br /><br />
+									This hybrid control and software architecture enables repeatable testing, live performance visualization, and post run analysis, closely mirroring data acquisition workflows used in professional propulsion test environments.</p>
 									<div class="image main"><img src="images/#" alt="" /></div>
 									<p>(insert Control System and Software here)</p>
 								<h2>Turbine Manufacturing and Assembly</h2>
-									<p>(insert Manufacturing and Assembly here)</p>
+									<p>Manufacturing and assembly focused on integrating airflow control, structural alignment, and serviceability into a compact propulsion system. Components were fabricated and assembled incrementally to ensure concentricity of the rotating assembly and proper alignment between stationary and rotating parts.<br /><br />
+									Custom three dimensional printed components were used to manage airflow and spacing between rotating stages. These included a keyed nozzle interface for the starter motor, a half cone spacer between the first and second compressor to guide airflow outward, and a cylindrical spacer between the second and third compressor to maintain consistent spacing and flow stability.<br /><br />
+									The rotating shaft assembly is supported by two precision bearings press fit into custom machined bearing holsters. The holsters are mounted to the shaft housing using threaded fasteners, allowing controlled positioning while maintaining a small clearance between the holster and housing for alignment adjustments.<br /><br />
+									Machined ports were added to the combustion chamber and shaft housing to allow air entry and fuel injection. Hole locations were first machined on one component, then aligned and transferred to mating parts to ensure precise matching. Orientation markings were applied during assembly to preserve alignment between the combustion chamber, shaft housing, and outer casing.<br /><br />
+									Assembly progressed from the inside outward, beginning with the shaft housing, bearings, and bearing holsters, followed by attachment to the combustion chamber. The shaft, compressors, and turbine were then aligned and installed before fitting the complete assembly into the outer casing. Clearances were verified to prevent rubbing between the compressor stages and the surrounding shell.<br /><br />
+									Early assembly attempts revealed attachment and friction issues at the turbine interface and stator region. Initial plans to solder the turbine to the shaft were abandoned due to unreliable bonding and serviceability concerns. A threaded shaft end was implemented using a die, allowing the turbine to be securely fastened while improving alignment control and ease of disassembly for iterative testing.</p>
 									<div class="image main"><img src="images/JetEngine_Intro2.jpg" alt="" /></div>
-									<p>(insert Manufacturing and Assembly here)</p>
 								<div class="image main"><img src="images/Tubing_Final.jpg" alt="" /></div>
 								<h2>Testing and Results</h2>
 									<p>(insert Testing and Results here)</p>
@@ -97,7 +111,8 @@
 									<p>(insert Design Challenges and Lessons Learned here)</p>
 									<div class="image main"><img src="images/Tubing_Initial" alt="" /></div>
 								<h2>Future Ideas</h2>
-									<p>(insert Future Ideas here)</p>
+									<p>Future work includes testing different compressor geometries and evaluating how changes in compression ratio affect TSFC. Additional modifications such as an afterburner section could be explored to study their impact on thrust and fuel consumption.<br /><br />
+									Further instrumentation and automation could also improve data resolution and repeatability, enabling more detailed performance mapping of the engine across operating conditions.</p>
 								<h2>Conclusion</h2>
 									<p>(insert Conclusion here)</p>
 							</section>
@@ -142,6 +157,7 @@
 
 
 </html>
+
 
 
 
