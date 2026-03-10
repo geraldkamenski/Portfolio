@@ -72,7 +72,6 @@
 									<p>The fuel system was designed to deliver a controlled and repeatable flow of gaseous fuel into the combustion chamber. Propane was selected over butane primarily due to its higher vapor pressure at ambient temperatures, which allows for more stable fuel delivery without excessive cooling of the tank.<br /><br />
 									Fuel is routed using 1.6 millimeter outer diameter copper capillary tubing commonly used in refrigeration systems. This tubing allows for precise routing in tight spaces while maintaining adequate flow control. The routing follows a diamond shaped layout, which provides flexibility for thermal expansion and reduces stress concentrations in the tubing.<br /><br />
 									An adapter is used to connect the propane tank to a standard regulator valve, allowing manual adjustment of fuel flow during operation. This setup provides a simple but effective means of controlling combustion intensity without introducing unnecessary system complexity.</p>
-									<div class="image main"><img src="images/#" alt="" /></div>
 								<h2>Electrical System Design</h2>
 									<p>The electrical system supports three primary functions: ignition, startup, and instrumentation. A high voltage transformer is used to generate a spark inside the combustion chamber during startup. A starter motor is mechanically coupled to the compressor to bring the turbine up to ignition speed before combustion becomes self-sustaining.</p>
 									<div class="image main"><img src="images/Turbine_Electronics.jpg" alt="" /></div>
@@ -83,15 +82,12 @@
 									<p>The testbed was designed to minimize external influences on measurements while maintaining operator safety. Linear rails are used to reduce friction in the thrust measurement direction, allowing the thrust load cell to experience force primarily along its intended axis.<br /><br />
 									The propane tank is placed toward the front of the testbed, away from the turbine and exhaust. This positioning keeps the tank in a cooler region and reduces exposure to radiant and convective heating from the engine.<br /><br />
 									Long spacers are used between load cell attachment points to ensure proper force transmission and to prevent bending moments or unintended side loads. An acrylic screen is included as a safety precaution, providing a physical barrier between the operator and the rotating machinery without obstructing visibility.</p>
-									<div class="image main"><img src="images/#" alt="" /></div>
 								<h2>Control System and Software</h2>
 									<p>Engine operation is controlled through a combination of manual hardware inputs and software driven data acquisition. Ignition and starter motor operation are initiated using physical switches, while fuel flow is adjusted manually through a regulator valve to allow fine control during startup and steady state operation.<br /><br />
 									An Arduino Mega 2560 is used as the primary data acquisition device, interfacing with two load cells to measure thrust and fuel mass in real time. The Arduino is integrated with a Python based data processing and visualization script, allowing live monitoring of engine performance during operation.<br /><br />
 									The Python interface displays real time plots of thrust, fuel mass flow rate, and thrust specific fuel consumption (TSFC). User input within the software allows the operator to define specific start and end times for data recording during a run. In addition to logging the full dataset for the entire engine operation, the system automatically extracts and saves focused datasets and plots corresponding to the selected time intervals.<br /><br />
 									For each run, the software generates time stamped plots, structured data tables, and calculated TSFC values. Logged data includes time, thrust, fuel mass flow rate, propane tank mass, and calculated TSFC. A validation routine is also implemented to flag data points that deviate beyond expected bounds, helping identify sensor noise, transient startup behavior, or measurement anomalies.<br /><br />
 									This hybrid control and software architecture enables repeatable testing, live performance visualization, and post run analysis, closely mirroring data acquisition workflows used in professional propulsion test environments.</p>
-									<div class="image main"><img src="images/#" alt="" /></div>
-									<p>(insert Control System and Software here)</p>
 								<h2>Turbine Manufacturing and Assembly</h2>
 									<p>Manufacturing and assembly focused on integrating airflow control, structural alignment, and serviceability into a compact propulsion system. Components were fabricated and assembled incrementally to ensure concentricity of the rotating assembly and proper alignment between stationary and rotating parts.<br /><br />
 									Custom three dimensional printed components were used to manage airflow and spacing between rotating stages. These included a keyed nozzle interface for the starter motor, a half cone spacer between the first and second compressor to guide airflow outward, and a cylindrical spacer between the second and third compressor to maintain consistent spacing and flow stability.<br /><br />
@@ -103,7 +99,6 @@
 								<div class="image main"><img src="images/Tubing_Final.jpg" alt="" /></div>
 								<h2>Testing and Results</h2>
 									<p>Testing is in progress. As the jet engine is heating up to operating temperatures, the starter motor is too hot to handle before reaching autonomous combustion within its combustion chamber. A holder for the starter motor is currently in development.</p>
-									<div class="image main"><img src="images/#" alt="" /></div>
 								<h2>Design Challenges and Lessons Learned</h2>
 									<p>Several fabrication challenges were encountered during the construction of the engine due to the use of handheld tools and small scale components. Many of the holes and cuts were drilled by hand, which occasionally introduced minor imperfections in sizing and symmetry even though proper measuring tools were used to carefully mark their locations beforehand. Another challenge involved the small diameter copper tubes used for the fuel injectors. When cutting these tubes, the material would often deform and partially close the inner passage, making it difficult to maintain a clean internal opening. To solve this issue, a bead reamer typically used in jewelry making was used to reopen and clean the inner diameter of the tubes after cutting. In addition, a custom starter interface had to be developed to connect the electric starter motor to the compressor nozzle and shaft assembly. This required designing and fabricating custom three dimensional printed components that could securely couple the motor to the engine during startup while maintaining proper alignment with the rotating assembly. As this project moves along, I will continue to update more challenges faced during this process.</p>
 									<div class="image main"><img src="images/Tubing_Initial" alt="" /></div>
@@ -154,6 +149,7 @@
 
 
 </html>
+
 
 
 
